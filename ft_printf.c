@@ -6,15 +6,38 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:17:50 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 13:56:46 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:44:08 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int ft_printf_helper()
+static int ft_printf_helper(va_list *args, char spec)
 {
-    
+    int len;
+
+    len = 0;
+    if (spec == 'c')
+        return ft_putchar(va_arg(*args, int));
+    else if (spec == '%')
+        return ft_putchar('%');
+    else if (spec == 's')
+        return ft_putstr(va_arg(*args, char *));
+    else if (spec == 'i' || spec == 'd')
+        return ft_put_signed_integer(va_arg(*args, int));
+    else if (spec == 'u')
+        return ft_put_unsigned_integer(va_arg(*args, unsigned int));
+    else if (spec == 'x' || spec == 'X' || spec == 'p')
+    {
+        len += ft_putstr("0x");
+        if (spec == 'x')
+            len += ft_puthexa(va_arg(*args, unsigned int));
+        else if (spec == 'X')
+            len += ft_puthexaup(va_arg(*args, unsigned int));
+        else
+            return ft_putaddress(va_arg(*args, unsigned long));
+    }
+    return (len);
 }
 
 static int ft_issep(char c)
@@ -38,11 +61,14 @@ int ft_printf(const char *str, ...)
 
     i = 0;
     bytes = 0;
-    va_start(args,str);
+    va_start(args, str);
     while (str[i])
     {
-        if (str[i] == '%' && ft_issep(str[i + 1]))
-            bytes += ft_printf_helper(args,str[i+ 1]);
+        if (str[i] == '%' && str[i + 1] && ft_issep(str[i + 1]))
+        {
+            i++;
+            bytes += ft_printf_helper(&args, str[i]);
+        }
         else
             bytes += ft_putchar(str[i]);
         i++;

@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_put_signed_integer.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 13:52:55 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 16:14:47 by mbenomar         ###   ########.fr       */
+/*   Created: 2024/11/12 14:17:20 by mbenomar          #+#    #+#             */
+/*   Updated: 2024/11/12 21:23:04 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int ft_putchar(int c)
+int ft_put_signed_integer(int nb)
 {
-    write(1, &c, 1);
-    return (1);
+    long    num;
+    int     len;
+    
+    num = nb;
+    len = 0;
+    if (num < 0)
+    {
+        len += ft_putchar('-');
+        num = -num;
+    }
+    if (num >= 10)
+        len += ft_put_signed_integer(num / 10);
+    len +=  ft_putchar(num % 10 + '0');
+    return len;
 }
