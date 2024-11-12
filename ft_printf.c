@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:17:50 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 23:03:35 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:09:31 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,20 @@ static int ft_printf_helper(va_list *args, char spec)
     return (len);
 }
 
+static int ft_issep(char c)
+{
+    int i;
+
+    i = 0;
+    while (PRINTF_SPECIFIERS[i])
+    {
+        if (PRINTF_SPECIFIERS[i] == c)
+            return (1);
+        i++;
+    }
+    return (0);
+}
+
 int ft_printf(const char *str, ...)
 {
     va_list args;
@@ -54,7 +68,13 @@ int ft_printf(const char *str, ...)
         if (str[i] == '%')
         {
             i++;
-            bytes += ft_printf_helper(&args, str[i]);
+            if (ft_issep(str[i]))
+                bytes += ft_printf_helper(&args, str[i]);
+            else
+            {
+                ft_putchar('%');
+                ft_putchar(str[i]);
+            }
         }
         else
             bytes += ft_putchar(str[i]);
