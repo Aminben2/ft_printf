@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:31:36 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 22:36:36 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:03:48 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
-
-# define HEXA "0123456789abcdef"
-# define HEXA_CAP "0123456789ABCDEF"
-# define PRINTF_SPECIFIERS "cspdiuxX%"
 
 int ft_printf(const char *str, ...);
 int ft_putchar(int c);
