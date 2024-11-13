@@ -16,9 +16,10 @@ int main(void)
     // printf("bytes : %d\n",i);
 
     // printf("%x",41241515);
-    int a = -5;
-    ft_printf("dyali : %p %p ", LONG_MIN, LONG_MAX);
-    printf("dyalom : %p %p ", LONG_MIN, LONG_MAX);
+    int s = ft_printf("d1 : %p %p ", LONG_MIN, LONG_MAX);
+    int s1 = printf("d2 : %p %p ", LONG_MIN, LONG_MAX);
+    printf("bytes dyali : %d\n",s);
+    printf("bytes dyalom : %d",s1);
     return 0;
     //-2147483648
     //4294967295

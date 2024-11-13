@@ -14,7 +14,7 @@ $(NAME) : $(OBJ)
 # bonus : $(BOBJ)
 # 	ar rc $(NAME) $(BOBJ)
 
-%.o: %.c libftprintf.h
+%.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # clean :
