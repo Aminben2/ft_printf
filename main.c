@@ -1,4 +1,6 @@
-#include "libftprintf.h"
+// #include "ft_printf.h"
+# include <stdio.h>
+
 
 int main(void)
 {
@@ -13,8 +15,10 @@ int main(void)
     // int i = ft_printf("amine %c %i %% %s %u %x %X %p\n",'a',4," amine",UINT_MAX,456465613,456465613,&test);
     // printf("bytes : %d\n",i);
 
-    printf("%");
-    ft_printf("%");
+    // printf("%x",41241515);
+    int a = -5;
+    // ft_printf("dyali : %p ",NULL);
+    printf("dyalom %p ",NULL);
     return 0;
     //-2147483648
     //4294967295

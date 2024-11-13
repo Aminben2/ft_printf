@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:31:36 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 23:07:11 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:42:04 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <limits.h>
-
-# define PRINTF_SPECIFIERS "cspdiuxX%"
 
 int ft_printf(const char *str, ...);
 int ft_putchar(int c);
@@ -28,6 +25,5 @@ int ft_putstr(char *str);
 int ft_puthexa(unsigned int address);
 int ft_puthexaup(unsigned int address);
 int ft_putaddress(unsigned long address);
-
 
 #endif

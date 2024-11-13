@@ -6,11 +6,11 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:52:55 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 16:14:47 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/13 09:45:33 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_putchar(int c)
 {

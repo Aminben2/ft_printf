@@ -6,12 +6,12 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 21:00:33 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 21:22:14 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/13 09:45:24 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_put_unsigned_integer(unsigned int nb)
 {

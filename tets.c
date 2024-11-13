@@ -20,6 +20,20 @@ int sum_help(va_list as, int n)
     return sum;
 }
 
+// static int ft_issep(char c)
+// {
+//     int i;
+
+//     i = 0;
+//     while (PRINTF_SPECIFIERS[i])
+//     {
+//         if (PRINTF_SPECIFIERS[i] == c)
+//             return (1);
+//         i++;
+//     }
+//     return (0);
+// }
+
 int sum(int a, ...)
 {
     va_list as;

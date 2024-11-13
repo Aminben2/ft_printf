@@ -6,11 +6,11 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:17:20 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/12 21:23:04 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/13 09:44:57 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_put_signed_integer(int nb)
 {
