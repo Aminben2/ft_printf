@@ -1,4 +1,4 @@
-// #include "ft_printf.h"
+#include "ft_printf.h"
 # include <stdio.h>
 
 
@@ -17,8 +17,8 @@ int main(void)
 
     // printf("%x",41241515);
     int a = -5;
-    // ft_printf("dyali : %p ",NULL);
-    printf("dyalom %p ",NULL);
+    ft_printf("dyali : %p %p ", LONG_MIN, LONG_MAX);
+    printf("dyalom : %p %p ", LONG_MIN, LONG_MAX);
     return 0;
     //-2147483648
     //4294967295
