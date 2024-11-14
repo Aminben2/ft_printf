@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:31:36 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/13 16:19:43 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:31:05 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int ft_putchar(int c);
 int ft_put_signed_integer(int nb);
 int ft_put_unsigned_integer(unsigned int nb);
 int ft_putstr(char *str);
-int ft_puthexa(unsigned int address);
-int ft_puthexaup(unsigned int address);
+int	ft_puthexa(unsigned int address, char format);
+// int ft_puthexaup(unsigned int address);
 int ft_putaddress(unsigned long address);
 
 #endif

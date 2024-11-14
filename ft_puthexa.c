@@ -6,21 +6,26 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:55:53 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/13 09:45:37 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:30:49 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_puthexa(unsigned int address)
+int	ft_puthexa(unsigned int address, char format)
 {
-    char *hexa;
-    int len;
+	char *hexa;
+	int len;
 
-    hexa = "0123456789abcdef";
-    len = 0;
-    if (address >= 16)
-        len += ft_puthexa(address / 16);
-    len +=  ft_putchar(hexa[address % 16]);
-    return len;
+	if (format == 'x')
+        hexa = "0123456789abcdef";
+    else if (format == 'X')
+        hexa = "0123456789ABCDEF";
+    else
+        return (0);
+		len = 0;
+	if (address >= 16)
+		len += ft_puthexa(address / 16,format);
+	len += ft_putchar(hexa[address % 16]);
+	return (len);
 }
