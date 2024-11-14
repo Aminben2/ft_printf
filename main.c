@@ -1,6 +1,5 @@
 #include "ft_printf.h"
-# include <stdio.h>
-
+#include <stdio.h>
 
 int main(void)
 {
@@ -25,6 +24,6 @@ int main(void)
     printf("%X",45444545454);
     return 0;
     //-2147483648
-    //4294967295
-    //aminea4% amine4294967295
+    // 4294967295
+    // aminea4% amine4294967295
 }
