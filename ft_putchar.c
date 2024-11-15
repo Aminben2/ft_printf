@@ -6,14 +6,14 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:52:55 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/13 09:45:33 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:41:18 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(int c)
+int	ft_putchar(int c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }

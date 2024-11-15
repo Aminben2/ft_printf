@@ -6,21 +6,21 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 22:23:09 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/13 10:32:53 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:41:13 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putaddress(unsigned long address)
+int	ft_putaddress(unsigned long address)
 {
-    char *hexa;
-    int len;
+	char *hexa;
+	int len;
 
-    hexa = "0123456789abcdef";
-    len = 0;
-    if (address >= 16)
-        len += ft_putaddress(address / 16);
-    len += ft_putchar(hexa[address % 16]);
-    return len;
+	hexa = "0123456789abcdef";
+	len = 0;
+	if (address >= 16)
+		len += ft_putaddress(address / 16);
+	len += ft_putchar(hexa[address % 16]);
+	return (len);
 }
