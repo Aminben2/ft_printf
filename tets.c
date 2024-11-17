@@ -24,6 +24,9 @@ int	sum_help(va_list as, int n)
 	return (sum);
 }
 
+
+
+
 // static int ft_issep(char c)
 // {
 //     int i;
