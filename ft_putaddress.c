@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 22:23:09 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/15 11:41:13 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:42:00 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putaddress(unsigned long address)
 {
-	char *hexa;
-	int len;
+	char	*hexa;
+	int		len;
 
 	hexa = "0123456789abcdef";
 	len = 0;

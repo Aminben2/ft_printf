@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:15:34 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/15 11:41:28 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:43:49 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	if (!str)
 	{

@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:17:20 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/15 11:41:02 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:41:27 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_put_signed_integer(int nb)
 {
-	long num;
-	int len;
+	long	num;
+	int		len;
 
 	num = nb;
 	len = 0;

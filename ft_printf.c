@@ -6,7 +6,7 @@
 /*   By: mbenomar <mbenomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:17:50 by mbenomar          #+#    #+#             */
-/*   Updated: 2024/11/15 11:39:56 by mbenomar         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:41:03 by mbenomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static int	ft_printf_helper(va_list *args, char spec)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
-	int i;
-	int bytes;
+	va_list	args;
+	int		i;
+	int		bytes;
 
 	if (write(1, "", 0) == -1)
 		return (-1);
